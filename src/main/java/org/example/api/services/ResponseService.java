@@ -42,4 +42,10 @@ public class ResponseService {
                 .body(GSON.toJson(model));
         return getResponse(method, requestSpecification);
     }
+
+    public static Response sendModel(Method method, Path path) {
+        RequestSpecification requestSpecification = given()
+                .basePath(path.getPath());
+        return getResponse(method, requestSpecification);
+    }
 }
