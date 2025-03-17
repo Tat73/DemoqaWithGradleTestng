@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class BaseTest {
 
     public static void setUp() {
-        open(ReadProperties.UI_BASE_URL);
+        open(ReadProperties.url);
         Configuration.browser = "chrome";
         WebDriverRunner.getWebDriver().manage().window().maximize();
         WebDriverRunner.getWebDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
