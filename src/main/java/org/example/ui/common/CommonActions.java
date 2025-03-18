@@ -17,4 +17,8 @@ public class CommonActions {
     public static void scrollToElement(SelenideElement element) {
         $(element).scrollIntoView(true);
     }
+
+    public static String getText(SelenideElement element) {
+        return $(element).getText();
+    }
 }
